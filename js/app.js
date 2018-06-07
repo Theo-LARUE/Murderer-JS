@@ -17,7 +17,7 @@ var $dial_container = document.querySelector('.history-dialogues');
 var $history_container = document.querySelector('.history');
 
 
-pageRequest('../dialog.json');
+pageRequest('/Murderer-JS/dialog.json');
 
 function pageRequest(url) {
   fetch(url)
