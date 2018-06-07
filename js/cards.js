@@ -1,37 +1,3 @@
-// document.addEventListener('click', () => alert('Hellooooo'));
-
-// var page_rapport = document.querySelector('.investigation-rapport');
-// var page_details = document.querySelector('.investigation-details');
-// var page_suspects = document.querySelector('.investigation-suspects');
-
-//page_rapport.addEventListener('click', function () {
-//   clearInterval(makeitshake);
-//   page_suspects.style.zIndex = '1';
-//   page_details.style.zIndex = '2';
-//   page_rapport.style.zIndex = '3';
-//   page_details.style.right = '-75px';
-//   // page_suspects.style.right = '-50px';
-//   makeitshake = setInterval(animatePage, 2000);
-// });
-
-// page_details.addEventListener('click', function () {
-//   clearInterval(makeitshake);
-//   page_suspects.style.zIndex = '1';
-//   page_rapport.style.zIndex = '2';
-//   page_details.style.zIndex = '3';
-//   page_details.style.right = '25px';
-//   makeitshake = setInterval(animatePage, 2000);
-// });
-
-// page_suspects.addEventListener('click', function () {
-//   clearInterval(makeitshake);
-//   page_rapport.style.zIndex = '1';
-//   page_details.style.zIndex = '2';
-//   page_suspects.style.zIndex = '3';
-//   page_details.style.right = '-75px';
-//   makeitshake = setInterval(animatePage, 2000);
-// });
-
 var animation_page = Array.from(document.querySelectorAll('.investigation-page'));
 var suspects = Array.from(document.querySelectorAll('.suspects'));
 var right_arrow = document.querySelector('.right');

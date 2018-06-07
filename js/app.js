@@ -1,12 +1,3 @@
-//const body = document.querySelector('#app');
-// const links = Array.from(document.querySelectorAll('.ajax'));
-
-// links.forEach((link) => {
-//   link.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     pageRequest(link.getAttribute('href'));
-//   });
-// });
 var suspects = null;
 var json = null
 var inspector = null;
