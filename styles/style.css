@@ -1,0 +1,486 @@
+@font-face {
+    font-family: TOP_SECRET;
+    src: url(../font/TopSecret.ttf);
+}
+
+@font-face {
+    font-family: TOP_SECRET_2;
+    src: url(../font/_TOP_SECRET_.otf);
+}
+
+@font-face {
+    font-family: OldNewspaperTypes;
+    src: url(../font/OldNewspaperTypes.ttf);
+}
+
+@font-face {
+    font-family: Top_Secret_Stamp;
+    src: url(../font/TopSecretStamp.ttf);
+}
+
+@font-face {
+    font-family: Traveling _Typewriter;
+    src: url(../font/TravelingTypewriter.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.start {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/background1.svg') center center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.start-container {
+    height: 100%;
+    text-align: center;
+}
+
+.start:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -50%;
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) center bottom, url('../img/ruban.svg') top center no-repeat;
+    background-size: cover;
+}
+
+.start-title {
+    font-family: TOP_SECRET;
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    font-size: 72px;
+    color: #a20000;
+}
+
+.start-button {
+    font-family: OldNewspaperTypes;
+    font-size: 48px;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    animation: clignotement 1.5s ease alternate infinite;
+}
+
+.start-button:hover {
+    text-decoration: underline;
+}
+
+.start-ruban {
+    display: block;
+    width: 100%;
+}
+
+.investigation {
+    width: 100%;
+    height: 100vh;
+    padding: 3em 0;
+    background: url('../img/background2.svg') center center no-repeat;
+    background-size: cover;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+}
+
+.investagation-rolls {
+    width: 25%;
+    font-family: Traveling _Typewriter;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.investigation-container {
+    position: relative;
+    height: 100%;
+    width: 440px;
+    margin: 0 auto;
+}
+
+.investigation-rapport,
+.investigation-details,
+.investigation-suspects {
+    background: url('../img/paper.svg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 3em;
+    border: 1px solid black;
+}
+
+.investigation-rapport:hover {
+    cursor: pointer;
+}
+
+.investigation-title {
+    font-family: TOP_SECRET;
+    font-size: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.investigation-date {
+    font-family: Top_Secret_Stamp;
+    font-size: 18px;
+}
+
+.investigation-text {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: Traveling _Typewriter;
+    margin-top: 2em;
+}
+
+.investigation-details:hover {
+    cursor: pointer;
+}
+
+.suspects {
+    display: none;
+}
+
+.suspects.is-active {
+    display: block;
+}
+
+.investigation-page {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    width: 100%;
+    height: calc(440px * 1.4142);
+}
+
+.investigation-page:nth-child(1) {
+    z-index: 3;
+    transform: translateY(-50%);
+}
+
+.investigation-page:nth-child(2) {
+    z-index: 2;
+    transform: rotate(-8deg) translateY(-50%);
+}
+
+.investigation-page:nth-child(3) {
+    transform: rotate(10deg) translateY(-50%);
+    z-index: 1;
+}
+
+.investigation-suspects:hover {
+    cursor: pointer;
+}
+
+.investigation-containerImg {
+    transform: rotate(-10deg);
+    width: 100%;
+}
+
+.investigation-suspects>.investigation-title {
+    margin-bottom: 0.4em;
+}
+
+.investigation-name {
+    font-family: Traveling _Typewriter;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -1em;
+}
+
+.investigation-containerSuspects {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.container-info {
+    display: flex;
+    font-family: Traveling _Typewriter;
+    font-size: 14px;
+}
+
+.investigation-containerType {
+    width: 60%;
+}
+
+.investigation-type {
+    margin-bottom: 0.5em;
+}
+
+.investigation-containerInfo {
+    width: 60%;
+}
+
+.investigation-info {
+    margin-bottom: 0.5em;
+}
+
+.investigation-page--is-active {
+    z-index: 4 !important;
+}
+
+.left,
+.right {
+    position: absolute;
+    top: 35%;
+    font-size: 2em;
+    transition: 0.26s ease;
+}
+
+.left:hover,
+.right:hover {
+    transform: translateY(-10%);
+}
+
+.left {
+    left: 1em;
+}
+
+.right {
+    right: 1em;
+}
+
+.examination-button {
+    text-decoration: none;
+    font-family: OldNewspaperTypes;
+    width: 20%;
+    font-size: 32px;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1.1em;
+    bottom: 1.8em;
+    text-align: left;
+}
+
+.examination-button:hover {
+    text-decoration: underline;
+}
+
+.is_shake {
+    animation: shake 0.3s 4 linear 0s alternate;
+}
+
+.history {
+    background: url('../img/background-history.svg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.history-container {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    z-index: 1;
+}
+
+.history-dialogues {
+    padding: 2em;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    width: 100%;
+    height: 60vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.dialogue-inspector {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 1em;
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.dialogue-suspect {
+    width: 50%;
+    background-color: rgba(242, 201, 76, 0.85);
+    padding: 1em;
+    border-radius: 25px;
+    transform: translateX(100%);
+    margin-bottom: 1em;
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.history-questions {
+    position: fixed;
+    top: 60vh;
+    padding: 2em 0;
+    /* background-color: rgba(255, 9, 9, 0.5); */
+    width: 80%;
+    height: 20vh;
+}
+
+.question {
+    margin-bottom: 1em;
+    display: block;
+    min-width: 20%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1em;
+    cursor: pointer;
+}
+
+.question:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1)
+}
+
+.container-historyImg {
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.history-changeSuspect {
+    font-family: OldNewspaperTypes;
+    font-size: 48px;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    animation: clignotement 1.5s ease alternate infinite;
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.history-suspectName {
+    text-align: center;
+    color: #ffffff;
+    font-size: 26px;
+    margin: 2em 0;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+/* FIN.HTML */
+
+.end {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/paper.svg') center center no-repeat;
+    background-size: cover;
+}
+
+.end-container {
+    text-align: center;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.end-title {
+    font-family: TOP_SECRET;
+    font-size: 30px;
+    text-align: center;
+    padding: 3em 0 1em 0;
+}
+
+.end-text {
+    width: 50%;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: Traveling _Typewriter;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.end-date {
+    font-family: Top_Secret_Stamp;
+    font-size: 20px;
+}
+
+.end-lieu {
+    font-family: Top_Secret_Stamp;
+    font-size: 20px;
+    margin-bottom: 3em;
+}
+
+.end-link {
+    color: #000000;
+    font-family: TOP_SECRET;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 5em;
+}
+
+/* FIN.HTML */
+
+@keyframes clignotement {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(2%);
+    }
+}
+
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black;
+    }
+} */
