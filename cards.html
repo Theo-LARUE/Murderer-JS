@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Who's the murderer</title>
+</head>
+
+<body>
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path d="M31 16l-15-15v9h-16v12h16v9z"></path>
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <title>arrow-left</title>
+        <path d="M1 16l15 15v-9h16v-12h-16v-9z"></path>
+      </symbol>
+    </defs>
+  </svg>
+  <section class="investigation">
+    <audio id="audioPage">
+      <source src="./sound/fiches.wav">
+    </audio>
+    <div class="investigation-container">
+      <div class="investigation-page investigation-page--is-active">
+        <div class="investigation-rapport" id="rapport">
+          <h2 class="investigation-title">Rapport d'enquête</h2>
+          <h3 class="investigation-date">20 juin 2017 :</h3>
+          <h3 class="investigation-date">Section criminelle de Paris</h3>
+          <p class="investigation-text">Le 16 juin 2017, à Montreuil, Mélissandre .D fête son anniversaire chez elle et a invité la plupart de ses amis.
+            Le lendemain matin, Lorick, une connaissance de Mel invité à la soirée, retrouve le corps de la jeune fille dans
+            le garage. </p>
+          <p class="investigation-text">La mort est diagnostiquée non naturelle et l’on suspecte un homicide de la part de l’un des invités. Une enquête
+            a été ouverte pour trouver le/les coupable(s) ou les raisons de sa mort.</p>
+        </div>
+      </div>
+      <div class="investigation-page">
+        <div class="investigation-details" id="details">
+          <h2 class="investigation-title">SUIVI d’enquête</h2>
+          <p class="investigation-text">Vous êtes L Lawliet, inspecteur spécial sur l’enquête du crime de la jeune Mélissandre, et votre rôle est de trouver
+            le coupable de ce crime. </p>
+          <p class="investigation-text">À ce jour, nous avons mené l’enquête et suspectons 4 individus présents lors de la soirée où a eu lieu le meurtre
+            de la jeune fille. </p>
+          <div class="investigation-containerImg">
+            <img class="investigation-img" src="./img/suspects.svg" alt="Affiche des 4 suspects'">
+          </div>
+        </div>
+      </div>
+      <div class="investigation-page">
+        <div class="investigation-suspects">
+          <div class="left">
+            <svg class="icon icon-arrow-left">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </div>
+          <div class="right">
+            <svg class="icon icon-arrow-right">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </div>
+          <div class="suspect-Lorick suspects is-active">
+            <h2 class="investigation-title">Suspect n°1</h2>
+            <h3 class="investigation-name">Lorick</h3>
+            <div class="investigation-containerSuspects">
+              <img class="investigation-imgSuspect" src="./img/lorick.svg" alt="Suspect n°1">
+            </div>
+            <div class="container-info">
+              <ul class="investigation-containerType">
+                <li class="investigation-type">Genre</li>
+                <li class="investigation-type">Age</li>
+                <li class="investigation-type">Taille</li>
+                <li class="investigation-type">Poids</li>
+                <li class="investigation-type">Contact</li>
+                <li class="investigation-type">Ville</li>
+                <li class="investigation-type">Lien avec la victime</li>
+                <li class="investigation-type">Psychologie</li>
+                <li class="investigation-type">Antécédents</li>
+              </ul>
+              <ul class="investigation-containerInfo">
+                <li class="investigation-info">Homme</li>
+                <li class="investigation-info">25 ans</li>
+                <li class="investigation-info">1m82</li>
+                <li class="investigation-info">76 Kg</li>
+                <li class="investigation-info">06.61.67.76.81</li>
+                <li class="investigation-info">Paris</li>
+                <li class="investigation-info">Connaissance</li>
+                <li class="investigation-info">Dépendance sexuelle</li>
+                <li class="investigation-info">Rappel à la loi pour harcèlement</li>
+              </ul>
+            </div>
+          </div>
+          <div class="suspect-Angeline suspects">
+            <h2 class="investigation-title">Suspect n°2</h2>
+            <h3 class="investigation-name">Angéline</h3>
+            <div class="investigation-containerSuspects">
+              <img class="investigation-imgSuspect" src="./img/angeline.svg" alt="Suspect n°2">
+            </div>
+            <div class="container-info">
+              <ul class="investigation-containerType">
+                <li class="investigation-type">Genre</li>
+                <li class="investigation-type">Age</li>
+                <li class="investigation-type">Taille</li>
+                <li class="investigation-type">Poids</li>
+                <li class="investigation-type">Contact</li>
+                <li class="investigation-type">Ville</li>
+                <li class="investigation-type">Lien avec la victime</li>
+                <li class="investigation-type">Psychologie</li>
+
+                <li class="investigation-type">Antécédents</li>
+              </ul>
+              <ul class="investigation-containerInfo">
+                <li class="investigation-info">Femme</li>
+                <li class="investigation-info">21 ans</li>
+                <li class="investigation-info">1m63</li>
+                <li class="investigation-info">52 Kg</li>
+                <li class="investigation-info">06.65.91.84.45</li>
+                <li class="investigation-info">Créteil</li>
+                <li class="investigation-info">Meilleur ami</li>
+                <li class="investigation-info">Compulsive / impulsive</li>
+                <li class="investigation-info">Non</li>
+              </ul>
+            </div>
+          </div>
+          <div class="suspect-Reda suspects">
+            <h2 class="investigation-title">Suspect n°3</h2>
+            <h3 class="investigation-name">Réda</h3>
+            <div class="investigation-containerSuspects">
+              <img class="investigation-imgSuspect" src="./img/reda.svg" alt="Suspect n°3">
+            </div>
+            <div class="container-info">
+              <ul class="investigation-containerType">
+                <li class="investigation-type">Genre</li>
+                <li class="investigation-type">Age</li>
+                <li class="investigation-type">Taille</li>
+                <li class="investigation-type">Poids</li>
+                <li class="investigation-type">Contact</li>
+                <li class="investigation-type">Ville</li>
+                <li class="investigation-type">Lien avec la victime</li>
+                <li class="investigation-type">Psychologie</li>
+                <li class="investigation-type">Antécédents</li>
+              </ul>
+              <ul class="investigation-containerInfo">
+                <li class="investigation-info">Homme</li>
+                <li class="investigation-info">18 ans</li>
+                <li class="investigation-info">1m75</li>
+                <li class="investigation-info">90 Kg</li>
+                <li class="investigation-info">07.67.74.06.69</li>
+                <li class="investigation-info">Paris</li>
+                <li class="investigation-info">Petit ami</li>
+                <li class="investigation-info">Non</li>
+                <li class="investigation-info">Garde à vue pour consommation de stupéfiant</li>
+              </ul>
+            </div>
+          </div>
+          <div class="suspect-Lea suspects">
+            <h2 class="investigation-title">Suspect n°4</h2>
+            <h3 class="investigation-name">Léa</h3>
+            <div class="investigation-containerSuspects">
+              <img class="investigation-imgSuspect" src="./img/lea.svg" alt="Suspect n°4">
+            </div>
+            <div class="container-info">
+              <ul class="investigation-containerType">
+                <li class="investigation-type">Genre</li>
+                <li class="investigation-type">Age</li>
+                <li class="investigation-type">Taille</li>
+                <li class="investigation-type">Poids</li>
+                <li class="investigation-type">Contact</li>
+                <li class="investigation-type">Ville</li>
+                <li class="investigation-type">Lien avec la victime</li>
+                <li class="investigation-type">Psychologie</li>
+                <li class="investigation-type">Antécédents</li>
+              </ul>
+              <ul class="investigation-containerInfo">
+                <li class="investigation-info">Femme</li>
+                <li class="investigation-info">19 ans</li>
+                <li class="investigation-info">1m60</li>
+                <li class="investigation-info">60 Kg</li>
+                <li class="investigation-info">06.73.24.55.22</li>
+                <li class="investigation-info">Noisy</li>
+                <li class="investigation-info">Amie</li>
+                <li class="investigation-info">Posséssive</li>
+                <li class="investigation-info">Rappel à la loi pour stupéfiants</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="history.html" class="examination-button">Allez aux interrogatoires -></a>
+  </section>
+  <script src="js/cards.js"></script>
+</body>
+
+</html>
